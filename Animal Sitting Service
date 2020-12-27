@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+
+int PrintTotal();
+int enterNights();
+void drawLine();
+
+
+int main() {
+    int nights;
+    int total=0;
+    int menu_option;
+    int net_total=0;
+    
+    //enter nights
+    nights = enterNights();
+    total = PrintTotal();
+
+    //print the menu and enter option and calculate total
+
+
+
+       /* alternative print menu using if-else
+       
+        if (menu_option == 1)
+            total = total + 5;
+        else if (menu_option==2) 
+            total = total + 10;
+        else if (menu_option==3)
+            total = total + 4;
+        else if (menu_option ==4)
+             total=total+3;
+        else if ((menu_option>5) || (menu_option<1))
+            cout<<"Invalid Option"<<endl; 
+    } while (menu_option!=5);
+    
+    */
+    
+    //calculate the net_total
+    net_total = total * nights;
+    cout<<"Total is: $"<<net_total;
+    return 0;
+}
+
+void drawLine() {
+    cout<<"***********************"<<endl;
+
+}
+
+int PrintTotal() {
+    int menu_option, total;	
+    do {
+drawLine();
+    cout<<"Boarding prices"<<endl;
+    cout<<"1. Small Dog"<<endl;
+     cout<<"2. Big Dog"<<endl;
+    cout<<"3. Cat"<<endl;
+    cout<<"4. Parrot" <<endl;
+    cout<<"5. Other"<<endl;
+    cout<<"6. Quit"<<endl;
+    cout<<"Enter option: ";
+    
+    cin>>menu_option;
+    drawLine();
+
+
+       //printMenu
+        switch(menu_option)
+
+    {
+        case 1: total = total + 5; break;
+        case 2: total = total + 10; break;
+        case 3: total = total + 4; break;
+        case 4: total = total + 3; break;
+        case 5: total = total + 12; break;
+         case 6 : break;
+    }
+
+    }   while (menu_option!=5);
+    return total;
+
+}
+int enterNights() {
+    int nights;
+    cout<<"Enter the number of nights: ";
+    cin>>nights;
+    return nights;
+}
+
