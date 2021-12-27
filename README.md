@@ -5,4 +5,4 @@ This program started with me playing around with C++ and thought of this idea of
 number of nights and type of animal that needs to be watched over certain amount of days resulting in overall price for service. In other words 
 this will calcualte different service options which will include number of nights and the type of animal.
 
-This program could be modified into another service per night calculation as this was just a fun program to create.
+This program was written in C++ and could be modified into another service per night calculation as this was just a fun program to create.
